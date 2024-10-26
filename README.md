@@ -33,3 +33,5 @@ You can find out your cafeteria's ID by following these steps:
 4. If so, copy the ID from the URL (https://openmensa.org/c/{mensaID}/{date})
 
 As said in the introduction, this script is optimized for only one certain cafeteria and may not work as intended for others.
+ ## Credits
+ The whole widget is based on the data provided by [OpenMensa](https://openmensa.org/)
