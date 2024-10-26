@@ -79,6 +79,7 @@ for (meal of meals) {
   }
 }
 
+widget.addSpacer()
 
 widget.presentLarge()
 
