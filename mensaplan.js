@@ -24,6 +24,8 @@ priceType = "students" //students, employees, others
 
 accentColor = Color.red()
 
+salad_category = "QUEERBEET"
+
 //beginnig of the code
 
 
@@ -66,7 +68,7 @@ for (meal of meals) {
   mealIsVegan = meal.notes.includes("vegan")
   mealIsVegetarian = meal.notes.includes("vegetarisch") || mealIsVegan
 
-  if ((mealIsVegan || !vegan) && (mealIsVegetarian || !vegetarian) && (meal.category != "QUEERBEET" || showSalad)) {
+  if ((mealIsVegan || !vegan) && (mealIsVegetarian || !vegetarian) && (meal.category != salad_category || showSalad)) {
     label = widget.addText(meal.name)
     label.font = Font.regularSystemFont(12)
 
