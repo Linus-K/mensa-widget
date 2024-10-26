@@ -18,13 +18,14 @@ mensaID = 6
 
 vegan = false
 vegetarian = false
-showSalad = true //only works for Studentenwerk Hannover
+showSalad = true //only works for Studentenwerk Hannover witohout modifying salad_category
 
 priceType = "students" //students, employees, others  
 
 accentColor = Color.red()
 
-salad_category = "QUEERBEET"
+//name of the category that should be hidden
+salad_category = "QUEERBEET" 
 
 //beginnig of the code
 
