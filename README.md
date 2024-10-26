@@ -24,6 +24,7 @@ If you're only interested in the vegetarian or vegan options you can let the wid
 ### Hide Categories
 You can add categories that should be hidden by append their names as strings to the "hidden_categories"-array. 
 The category names can be found on the OpenMensa website (https://openmensa.org/c/{mensaID}) on the left side.
+
 *Example usage: In the default configuration for Hanover, all salad meals are hidden.*
 
 ### Other Cities 
