@@ -12,4 +12,4 @@ The script was developed specifically for the cafeteria menu of the "Studentenwe
    <br>
  
 ## Installation ##
-1. Download
+[1. Download](https://apps.apple.com/de/app/scriptable/id1405459188)
