@@ -1,6 +1,6 @@
 
 
-
+<div>
 <h2>Mensaplan Widget</h2>
 <img src=".github/example.png" width="220" alt="App icon" align="left"/>
 <p>A scriptable widget that retrieves and displays your university's cafeteria menu via the OpenMensa API.
@@ -10,6 +10,6 @@ The script was developed specifically for the cafeteria menu of the "Studentenwe
    <br>
    <br>
    <br>
- 
+ </div>
 ## Installation ##
 [1. Download](https://apps.apple.com/de/app/scriptable/id1405459188)
