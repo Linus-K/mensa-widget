@@ -18,14 +18,12 @@ mensaID = 6
 
 vegan = false
 vegetarian = false
-showSalad = true //only works for Studentenwerk Hannover witohout modifying salad_category
 
 priceType = "students" //students, employees, others  
 
 accentColor = Color.red()
 
-//name of the category that should be hidden
-salad_category = "QUEERBEET" 
+hidden_categories = ["QUEERBEET"]
 
 //beginnig of the code
 
@@ -69,7 +67,7 @@ for (meal of meals) {
   mealIsVegan = meal.notes.includes("vegan")
   mealIsVegetarian = meal.notes.includes("vegetarisch") || mealIsVegan
 
-  if ((mealIsVegan || !vegan) && (mealIsVegetarian || !vegetarian) && (meal.category != salad_category || showSalad)) {
+  if ((mealIsVegan || !vegan) && (mealIsVegetarian || !vegetarian) && (!hidden_categories.includes(meal.category))) {
     label = widget.addText(meal.name)
     label.font = Font.regularSystemFont(12)
 
@@ -121,6 +119,3 @@ function nextWeekday() {
 
   return date
 }
-
-
-
