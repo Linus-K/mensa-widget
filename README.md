@@ -18,16 +18,8 @@ The script was developed specifically for the cafeteria menu of the "Studentenwe
 5. Short press on the newly added widget and choose mensaplan as script.
 
 ## Configuration ##
-### Vegetarian / Vegan  
-If you're only interested in the vegetarian or vegan options you can let the widget only show these by replacing "false" with "true" next to the respective variables at the beginning of the script.
 
-### Hide Categories
-You can add categories that should be hidden by append their names as strings to the "hidden_categories"-array. 
-The category names can be found on the OpenMensa website (https://openmensa.org/c/{mensaID}) on the left side.
-
-*Example usage: In the default configuration for Hanover, all salad meals are hidden.*
-
-### Other Cities 
+### Change City 
 If you want to use the widget for another cafeteria, you'll have to replace the "mensaID" integer at the beginning of the script.
 
 You can find out your cafeteria's ID by following these steps:
@@ -37,5 +29,15 @@ You can find out your cafeteria's ID by following these steps:
 4. If so, copy the ID from the URL (https://openmensa.org/c/{mensaID}/{date})
 
 As said in the introduction, this script is optimized for only one certain cafeteria and may not work as intended for others.
+
+### Vegetarian / Vegan  
+If you're only interested in the vegetarian or vegan options you can let the widget only show these by replacing "false" with "true" next to the respective variables at the beginning of the script.
+
+### Hide Categories
+You can add categories that should be hidden by append their names as strings to the "hidden_categories"-array. 
+The category names can be found on the OpenMensa website (https://openmensa.org/c/{mensaID}) on the left side.
+
+*Example usage: In the default configuration for Hanover, all salad meals are hidden.*
+
  ## Credits
  The whole widget is based on the data provided by [OpenMensa](https://openmensa.org/)
