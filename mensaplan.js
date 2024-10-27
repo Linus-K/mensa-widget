@@ -11,7 +11,7 @@ note:
   add a large one 
 
 -> the widget is made for the Leibniz Universität in Hanover, but it also works
-  for others. Please check GitHub for more information.
+  for others. Please check GitHub for more information. (https://github.com/Linus-K/mensa-widget)
 */
 
 mensaID = 6 
