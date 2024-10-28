@@ -12,7 +12,7 @@ The script was developed specifically for the cafeteria menu of the "Studentenwe
 
 ## Setup ##
 1. Download the [Scriptable App](https://apps.apple.com/de/app/scriptable/id1405459188)
-2. Download the mensaplan.js-script and open it with Scriptable or copy it "iCloud Drive/Scriptable"
+2. Download the [mensaplan.js](https://raw.githubusercontent.com/Linus-K/mensa-widget/refs/heads/main/mensaplan.js)-script and open it with Scriptable or copy it "iCloud Drive/Scriptable"
 3. Configure (read below)
 4. Add a new medium or large widget to your home screen (depends on the amount of meals)
 5. Short press on the newly added widget and choose mensaplan as script.
