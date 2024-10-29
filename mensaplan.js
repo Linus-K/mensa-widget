@@ -17,13 +17,13 @@ note:
 mensaID = 6 
 
 vegan = false
-vegetarian = true
+vegetarian = false
 
 priceType = "students" //students, employees, others  
 
 accentColor = Color.red()
 
-showTomorrowAt = 15 //time from which on the menu of the next day is shown (in hours); change to 24 for midnight
+showTomorrowAt = 18 //time from which on the menu of the next day is shown (in hours); change to 24 for midnight
 
 hidden_categories = ["QUEERBEET"]
 
