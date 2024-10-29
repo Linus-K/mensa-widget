@@ -17,17 +17,18 @@ note:
 mensaID = 6 
 
 vegan = false
-vegetarian = false
+vegetarian = true
 
 priceType = "students" //students, employees, others  
 
 accentColor = Color.red()
 
+showTomorrowAt = 15 //time from which on the menu of the next day is shown (in hours); change to 24 for midnight
+
 hidden_categories = ["QUEERBEET"]
 
+
 //beginnig of the code
-
-
 const url = "https://openmensa.org/api/v2/canteens/" + mensaID + "/days/" + getIsoDate() + "/meals"
 
 let widget = new ListWidget()
@@ -107,8 +108,12 @@ function getIsoDate() {
  */
 function nextWeekday() {
   var date = new Date()
-  let df = new DateFormatter()
+  
+  if (date.getHours() >= showTomorrowAt) {
+    date.setDate(date.getDate() + 1);
+  }
 
+  let df = new DateFormatter()
   df.dateFormat = 'EEEEE'
   var wd = df.string(date)
 
