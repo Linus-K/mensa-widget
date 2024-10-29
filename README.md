@@ -1,7 +1,7 @@
 # Mensa Widget #
 <img src=".github/example.png" width="220" alt="App icon" align="left"/>
 <p>A scriptable widget (for iOS and iPadOS) that retrieves and displays your university's cafeteria menu via the OpenMensa API.
-The script was developed specifically for the cafeteria menu of the "Studentenwerk Hannover", but can also be used for other universities (read below).</p>
+The script was developed specifically for the cafeteria menu of the "Studentenwerk Hannover" (default is the Hauptmensa), but can also be used for other universities (read below).</p>
 
   <br>
    <br>
