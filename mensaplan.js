@@ -1,6 +1,3 @@
-// Variables used by Scriptable.
-// These must be at the very top of the file. Do not edit.
-// icon-color: orange; icon-glyph: utensils;
 /*
 note:
 -> you can filter vegan/vegetarian meals and hide salads (only LUH)
@@ -11,10 +8,10 @@ note:
   add a large one 
 
 -> the widget is made for the Leibniz Universität in Hanover, but it also works
-  for others. Please check GitHub for more information. (https://github.com/Linus-K/mensa-widget)
+  for others. Please check GitHub for more information.
 */
 
-mensaID = 6 
+mensaID = 6
 
 vegan = false
 vegetarian = false
@@ -23,12 +20,13 @@ priceType = "students" //students, employees, others
 
 accentColor = Color.red()
 
-showTomorrowAt = 18 //time from which on the menu of the next day is shown (in hours); change to 24 for midnight
-
 hidden_categories = ["QUEERBEET"]
 
+veggieTag = "ohne Fleisch"
 
 //beginnig of the code
+
+
 const url = "https://openmensa.org/api/v2/canteens/" + mensaID + "/days/" + getIsoDate() + "/meals"
 
 let widget = new ListWidget()
@@ -66,7 +64,7 @@ meals = await new Request(url).loadJSON()
 for (meal of meals) {
 
   mealIsVegan = meal.notes.includes("vegan")
-  mealIsVegetarian = meal.notes.includes("vegetarisch") || mealIsVegan
+  mealIsVegetarian = meal.notes.includes(veggieTag) || mealIsVegan
 
   if ((mealIsVegan || !vegan) && (mealIsVegetarian || !vegetarian) && (!hidden_categories.includes(meal.category))) {
     label = widget.addText(meal.name)
@@ -108,12 +106,8 @@ function getIsoDate() {
  */
 function nextWeekday() {
   var date = new Date()
-  
-  if (date.getHours() >= showTomorrowAt) {
-    date.setDate(date.getDate() + 1);
-  }
-
   let df = new DateFormatter()
+
   df.dateFormat = 'EEEEE'
   var wd = df.string(date)
 
