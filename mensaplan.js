@@ -1,3 +1,6 @@
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: orange; icon-glyph: utensils;
 /*
 note:
 -> you can filter vegan/vegetarian meals and hide salads (only LUH)
@@ -22,7 +25,7 @@ accentColor = Color.red()
 
 hidden_categories = ["QUEERBEET"]
 
-veggieTag = "ohne Fleisch"
+veggieTag = "ohne Fleisch" //the string used for tagging vegetarian meals
 
 //beginnig of the code
 
@@ -58,7 +61,8 @@ wd.font = Font.regularRoundedSystemFont(16)
 widget.addSpacer(12)
 
 //load meals from API
-meals = await new Request(url).loadJSON()
+try {
+  meals = await new Request(url).loadJSON()
 
 //the loop creates a new entry for every loaded meal
 for (meal of meals) {
@@ -76,9 +80,19 @@ for (meal of meals) {
     label.font = Font.boldSystemFont(10)
   }
 }
+} catch (error) {
+  error_string = String(error).toLowerCase()
+  error_msg = "Für diesen Tag liegt kein Plan vor."
+  if (error_string.includes("internet")){
+    error_msg = "Es gibt Probleme mit der Internetverbindung."
+  }
 
+  widget.addSpacer()
+  label = widget.addText(error_msg)
+  label.font = Font.regularSystemFont(14)
+  label.centerAlignText()
+}
 widget.addSpacer()
-
 widget.presentLarge()
 
 Script.setWidget(widget)
