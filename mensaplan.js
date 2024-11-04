@@ -17,15 +17,17 @@ note:
 mensaID = 6
 
 vegan = false
-vegetarian = false
+vegetarian = true
 
 priceType = "students" //students, employees, others  
 
 accentColor = Color.red()
 
+showTomorrowAt = 18 //time from which on the menu of the next day is shown (in hours); change to 24 for midnight
+
 hidden_categories = ["QUEERBEET"]
 
-veggieTag = "ohne Fleisch" //the string used for tagging vegetarian meals
+veggieTag = "ohne Fleisch"
 
 //beginnig of the code
 
@@ -115,13 +117,18 @@ function getIsoDate() {
 }
 
 /**
- * the function returns the date of the next weekday
+ * the function returns the date of today or the next weekday
+ * (depends on if it is after the in showTomorrowAt configured time or week-end)
  * @returns {Date} - next weekday's date
  */
 function nextWeekday() {
   var date = new Date()
-  let df = new DateFormatter()
 
+  if (date.getHours() >= showTomorrowAt) {
+    date.setDate(date.getDate() + 1);
+  }
+
+  let df = new DateFormatter()
   df.dateFormat = 'EEEEE'
   var wd = df.string(date)
 
