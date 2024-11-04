@@ -17,7 +17,7 @@ note:
 mensaID = 6
 
 vegan = false
-vegetarian = true
+vegetarian = false
 
 priceType = "students" //students, employees, others  
 
